@@ -1,0 +1,49 @@
+class Animal:
+    def __init__(self, nome, cor, especie):
+        self.nome = nome
+        self.cor = cor
+        self.especie = especie
+
+    def comer(self, comida):
+        print(f"{self.especie} {self.nome} foi comer {comida}.")
+        return
+    def beber(self, bebida):
+    	print(f"{self.especie} {self.nome} foi beber {bebida}. ")
+    def som(self):
+    	print(f"O {self.especie} {self.nome} está fazendo um som.")
+
+class Gato(Animal):
+    def __init__(self, nome, cor, especie):
+        super().__init__(nome, cor, especie)
+
+    def som(self):
+        print(f"{self.especie} {self.nome} está miando.")
+        return
+        
+class Coelho(Animal):
+	def __init__(self, nome, cor, especie):
+		super().__init__(nome, cor, especie)
+		
+	def som(self):
+		print(f"{self.especie} {self.nome} está chiando.")
+		return
+	
+class Vaca(Animal):
+	def __init__(self, nome, cor, especie):
+		super().__init__(nome, cor, especie)
+		
+	def som(self):
+		print(f"{self.especie} {self.nome} está mugindo.")
+		return
+
+G1 = Gato("Bibou", "Cinza", "Gato")
+G1.som()
+G1.comer("peixe")
+G1.beber("leite")
+C1 = Coelho("Bibi", "Branco", "Coelho")
+C1.som()
+C1.comer("legumes")
+V1 = Vaca("Dorinha", "Malhada", "Vaca")
+V1.som
+V1.comer("grama")
+V1.beber("água")
